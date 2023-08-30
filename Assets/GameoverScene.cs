@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameoverScene : MonoBehaviour
 {
-    GameObject Player;
     Vector3 Playerpos;
+    int count;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +14,16 @@ public class GameoverScene : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Playerpos = this.transform.position;
         if(Playerpos.y < 5)
         {
+            count++;
+        }
+        if(count > 50)
+        {
+            count = 0;
             SceneManager.LoadScene("GameoverScene");
         }
     }
