@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CameraContoroller : MonoBehaviour
+public class TitleCamera : MonoBehaviour
 {
     GameObject Player;
     Vector3 Playerpos;
@@ -12,6 +12,6 @@ public class CameraContoroller : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         Playerpos = Player.transform.position;
-        this.gameObject.transform.position = (new Vector3(Playerpos.x + 20, Playerpos.y + 5, -15));
+        this.gameObject.transform.position = (new Vector3(Playerpos.x, Playerpos.y, -15));
     }
 }

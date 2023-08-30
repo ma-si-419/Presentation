@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
         if(isJumpFlag == false)
         {
             count++;
-            if(count > 40)
+            if(count > 35)
             {
                 isJumpFlag = true;
                 count = 0;
