@@ -15,7 +15,6 @@ public class CoinContoroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(count);
         if(count == 100)
         {
             ScoreManager.score_num += 1000;
