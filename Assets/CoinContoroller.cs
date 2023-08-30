@@ -15,7 +15,8 @@ public class CoinContoroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(count > 99)
+        Debug.Log(count);
+        if(count == 100)
         {
             ScoreManager.score_num += 1000;
         }
@@ -25,8 +26,8 @@ public class CoinContoroller : MonoBehaviour
         //プレイヤーに触れたらコインが消えるように処理する
         if (collision.gameObject.CompareTag("Player"))
         {
-            count++;
-            ScoreManager.score_num += 10;
+            ScoreManager.score_num += 100;
+            ScoreManager.score_count += 1;
             AudioSource.PlayClipAtPoint(se,transform.position);
             Destroy(this.gameObject);
         }
