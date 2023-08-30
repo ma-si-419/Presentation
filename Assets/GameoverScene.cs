@@ -7,10 +7,11 @@ public class GameoverScene : MonoBehaviour
 {
     Vector3 Playerpos;
     int count;
+    GameObject Fade;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Fade = GameObject.Find("Panel");
     }
 
     // Update is called once per frame
@@ -24,6 +25,8 @@ public class GameoverScene : MonoBehaviour
         if(count > 50)
         {
             count = 0;
+            Fade.SetActive(true);
+            Fade.GetComponent<Feedin>().IsFadeOut();
             SceneManager.LoadScene("GameoverScene");
         }
     }

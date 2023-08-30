@@ -30,8 +30,8 @@ public class TitleButton : MonoBehaviour
     }
     public void ClickStartButton()
     {
+        isFlag = true;
         Fade.SetActive(true);
         Fade.GetComponent<Feedin>().IsFadeOut();
-        isFlag = true;
     }
 }
