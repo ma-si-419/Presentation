@@ -21,12 +21,12 @@ public class GameoverScene : MonoBehaviour
         if(Playerpos.y < 5)
         {
             count++;
+            Fade.SetActive(true);
+            Fade.GetComponent<Fadein>().IsFadeOut();
         }
         if(count > 50)
         {
             count = 0;
-            Fade.SetActive(true);
-            Fade.GetComponent<Feedin>().IsFadeOut();
             SceneManager.LoadScene("GameoverScene");
         }
     }

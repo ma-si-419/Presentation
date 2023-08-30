@@ -32,6 +32,6 @@ public class TitleButton : MonoBehaviour
     {
         isFlag = true;
         Fade.SetActive(true);
-        Fade.GetComponent<Feedin>().IsFadeOut();
+        Fade.GetComponent<Fadein>().IsFadeOut();
     }
 }
