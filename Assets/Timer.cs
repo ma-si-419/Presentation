@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public int TimeCount;
+    public static int TimeCount;
     int count;
     public GameObject Time;
     // Start is called before the first frame update

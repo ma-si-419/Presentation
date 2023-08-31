@@ -3,36 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleButton : MonoBehaviour
+public class ClearScene : MonoBehaviour
 {
-    public AudioClip se;
-    GameObject Fade;
-    bool isFlag;
+    Vector3 Playerpos;
     int count;
+    GameObject Fade;
     // Start is called before the first frame update
     void Start()
     {
-        count = 0;
         Fade = GameObject.Find("Panel");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (isFlag)
+        Playerpos = this.transform.position;
+        if (Playerpos.x > 565)
         {
             count++;
+            Fade.SetActive(true);
+            Fade.GetComponent<Fadein>().IsFadeOut();
         }
         if (count > 50)
         {
-            SceneManager.LoadScene("SampleScene");
+            count = 0;
+            SceneManager.LoadScene("ClearScene");
         }
-    }
-    public void ClickStartButton()
-    {
-        isFlag = true;
-        Fade.SetActive(true);
-        Fade.GetComponent<Fadein>().IsFadeOut();
-        AudioSource.PlayClipAtPoint(se, transform.position);
     }
 }
