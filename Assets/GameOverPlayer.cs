@@ -17,7 +17,7 @@ public class GameOverPlayer : MonoBehaviour
         Playerpos = this.transform.position;
         if(Playerpos.y < -5 )
         {
-            Playerpos.y = 10;
+            this.gameObject.transform.position = new Vector3(0,10,0);
         }
     }
 }
