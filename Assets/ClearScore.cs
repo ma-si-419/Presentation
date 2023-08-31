@@ -11,6 +11,7 @@ public class ClearScore : MonoBehaviour
     void Start()
     {
         score_num = ScoreManager.score_num;
+        ScoreManager.score_num = 0;
     }
 
 

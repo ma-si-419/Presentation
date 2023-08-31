@@ -54500,7 +54500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a80caf3e1ab6be4fb3d9577a0a138d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeCount: 60
   Time: {fileID: 579733714}
 --- !u!114 &579733717
 MonoBehaviour:
@@ -56778,7 +56777,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c5dffc988d6f561409f4af98b6905c29, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.099
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 1
   Mute: 0
