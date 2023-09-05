@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TitleButton : MonoBehaviour
+public class oneStageButton : MonoBehaviour
 {
     public AudioClip se;
     GameObject Fade;
@@ -25,7 +25,7 @@ public class TitleButton : MonoBehaviour
         }
         if (count > 50)
         {
-            SceneManager.LoadScene("SelectScene");
+            SceneManager.LoadScene("SampleScene");
         }
     }
     public void ClickStartButton()
