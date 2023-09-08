@@ -17,7 +17,6 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(TimeCount);
         count++;
         if(count > 50)
         {
